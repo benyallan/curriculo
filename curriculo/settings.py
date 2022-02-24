@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'core',
     'portifolio',
     'experienciaProfissional',
+    'formacao',
 ]
 
 MIDDLEWARE = [
