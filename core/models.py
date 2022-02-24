@@ -4,13 +4,25 @@ from django.db import models
 class DadosPessoais(models.Model):
 
     name = models.CharField(("nome"), max_length=250)
-    birth = models.DateField(("data de nascimento"), auto_now=False, auto_now_add=False)
-    sex = models.CharField(("sexo"), max_length=1)
-    adress = models.CharField(("endereço"), max_length=250)
-    mail = models.CharField(("e-mail"), max_length=255)
-    sumary = models.TextField(("sobre"))
-    photo = models.ImageField(("foto"), upload_to=None, height_field=None, width_field=None, max_length=None)
-    personalSite = models.URLField(("site pessoal"), max_length=200)
+    birth = models.DateField(
+            ("data de nascimento"), 
+            auto_now=False, auto_now_add=False, 
+            null=True, blank=True
+        )
+    sex = models.CharField(("sexo"), max_length=1, null=True, blank=True)
+    adress = models.CharField(
+            ("endereço"), max_length=250, null=True, blank=True
+        )
+    mail = models.CharField(("e-mail"), max_length=255, null=True, blank=True)
+    sumary = models.TextField(("sobre"), null=True, blank=True)
+    photo = models.ImageField(
+            ("foto"), upload_to=None, height_field=None, 
+            width_field=None, max_length=None, 
+            null=True, blank=True
+        )
+    personalSite = models.URLField(
+            ("site pessoal"), max_length=200, null=True, blank=True
+        )
 
     class Meta:
         verbose_name = ("Dados Pessoais")
