@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'experienciaProfissional',
     'formacao',
     'cursos',
+    'idiomas',
 ]
 
 MIDDLEWARE = [

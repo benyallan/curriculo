@@ -6,6 +6,7 @@ from portifolio.api.viewsets import PortifolioViewSet
 from experienciaProfissional.api.viewsets import ExperienciaProfissionalViewSet
 from formacao.api.viewsets import FormacaoViewSet
 from cursos.api.viewsets import CursoViewSet
+from idiomas.api.viewsets import IdiomaViewSet
 
 
 router = routers.DefaultRouter()
@@ -14,6 +15,7 @@ router.register(r'portifolio', PortifolioViewSet)
 router.register(r'experienciaprofissional', ExperienciaProfissionalViewSet)
 router.register(r'formacao', FormacaoViewSet)
 router.register(r'cursos', CursoViewSet)
+router.register(r'idiomas', IdiomaViewSet)
 
 
 urlpatterns = [
