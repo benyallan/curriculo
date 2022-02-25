@@ -7,6 +7,7 @@ from experienciaProfissional.api.viewsets import ExperienciaProfissionalViewSet
 from formacao.api.viewsets import FormacaoViewSet
 from cursos.api.viewsets import CursoViewSet
 from idiomas.api.viewsets import IdiomaViewSet
+from habilidades.api.viewsets import HabilidadeViewSet
 
 
 router = routers.DefaultRouter()
@@ -16,6 +17,7 @@ router.register(r'experienciaprofissional', ExperienciaProfissionalViewSet)
 router.register(r'formacao', FormacaoViewSet)
 router.register(r'cursos', CursoViewSet)
 router.register(r'idiomas', IdiomaViewSet)
+router.register(r'habilidades', HabilidadeViewSet)
 
 
 urlpatterns = [

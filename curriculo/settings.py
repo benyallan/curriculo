@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'formacao',
     'cursos',
     'idiomas',
+    'habilidades',
 ]
 
 MIDDLEWARE = [
