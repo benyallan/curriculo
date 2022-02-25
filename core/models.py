@@ -16,7 +16,7 @@ class DadosPessoais(models.Model):
     mail = models.CharField(("e-mail"), max_length=255, null=True, blank=True)
     sumary = models.TextField(("sobre"), null=True, blank=True)
     photo = models.ImageField(
-            ("foto"), upload_to=None, height_field=None, 
+            ("foto"), upload_to='foto', height_field=None, 
             width_field=None, max_length=None, 
             null=True, blank=True
         )
