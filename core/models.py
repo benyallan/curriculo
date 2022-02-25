@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class DadosPessoais(models.Model):
@@ -33,7 +34,7 @@ class DadosPessoais(models.Model):
 
 class Telefone(models.Model):
 
-    number = models.CharField(("número"), max_length=15)
+    number = PhoneNumberField(unique=True)
     whatsapp = models.BooleanField(("WhatsApp"), default=False)
     telegram = models.BooleanField(("Telegram"), default=False)
     person = models.ForeignKey(
@@ -45,7 +46,7 @@ class Telefone(models.Model):
         verbose_name_plural = ("Telefones")
 
     def __str__(self):
-        return self.number
+        return str(self.number)
 
 class RedesSociais(models.Model):
 
