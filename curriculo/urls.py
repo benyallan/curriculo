@@ -8,6 +8,7 @@ from formacao.api.viewsets import FormacaoViewSet
 from cursos.api.viewsets import CursoViewSet
 from idiomas.api.viewsets import IdiomaViewSet
 from habilidades.api.viewsets import HabilidadeViewSet
+from .views import welcome
 
 
 router = routers.DefaultRouter()
@@ -21,6 +22,7 @@ router.register(r'habilidades', HabilidadeViewSet)
 
 
 urlpatterns = [
+    path('', welcome),
     path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
 ]
