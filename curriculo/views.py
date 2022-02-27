@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from core.models import DadosPessoais
 
 
 def welcome(request):
-    return render(request, 'index.html')
+    pessoa = DadosPessoais.objects.first()
+    dados = {'pessoa': pessoa}
+    return render(request, 'index.html', dados)
