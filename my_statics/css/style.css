@@ -1,3 +1,11 @@
 .name {
     font-weight: bolder;
 }
+
+i {
+    margin: 3px;
+}
+
+.p-phone {
+    margin-right: 3px;
+}
