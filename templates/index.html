@@ -13,46 +13,45 @@
     </head>
     <body>
         <nav class="nav justify-content-end">
-          <a class="nav-link active" href="#">Registrar</a>
-          <a class="nav-link" href="#">Entrar</a>
+            <a class="nav-link active" href="#">Registrar</a>
+            <a class="nav-link" href="#">Entrar</a>
         </nav>
         
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title name"> {{ pessoa.name }} </h4>
-                <p class="card-text">{% lorem how_many_paragraphs %}</p>
+        <main role="main">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-4 name">{{pessoa.name}}</h1>
+                    <p>{{pessoa.sumary}}</p>
+                </div>
             </div>
-        </div>
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Experiência</h3>
-                <p class="card-text">{% lorem how_many_paragraphs %}</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Formação</h3>
-                <p class="card-text">{% lorem how_many_paragraphs %}</p>
-              </div>
-            </div>
-          </div>
-        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <h2>Experiêcia</h2>
+                            <p>{% lorem how_many_paragraphs %}</p>
+                        </div>
+                        <div class="row">
+                            <h2>Formação</h2>
+                            <p>{% lorem how_many_paragraphs %}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <figure class='figure'>
+                                <img src="{% static pessoa.photo %}" class="figure-img img-fluid rounded img-thumbnail" alt="{{pessoa.name}}">
+                                <figcaption class="figure-caption">{{pessoa.name}}</figcaption>
+                            </figure>
+                        </div>
+                        <div class="row">
+                            {{pessoa.address}}
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <img src="{% static 'user.jpeg' %}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-                </div>
             </div>
-        </div>
-        
-        
+        </main>
+
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

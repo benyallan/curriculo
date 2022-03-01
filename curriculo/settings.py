@@ -95,6 +95,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = 'static_files'
 STATICFILES_DIRS = [
     "my_statics",
+    'media_files'
 ]
 
 MEDIA_URL = 'media/'

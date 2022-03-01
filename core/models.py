@@ -11,7 +11,7 @@ class DadosPessoais(models.Model):
             null=True, blank=True
         )
     sex = models.CharField(("sexo"), max_length=1, null=True, blank=True)
-    adress = models.CharField(
+    address = models.CharField(
             ("endereço"), max_length=250, null=True, blank=True
         )
     mail = models.CharField(("e-mail"), max_length=255, null=True, blank=True)
